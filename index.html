@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#155eef"><link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css"><title>DAINIK — रोज़ के काम, एक ही ऐप में</title>
+</head>
+<body>
+<header><div class="brand"><div class="logo">D</div><div><h1>DAINIK</h1><small>रोज़ के काम, एक ही ऐप में</small></div></div><span id="status" class="status">● Offline-ready</span></header>
+<main>
+<section class="welcome"><h2>नमस्ते 👋</h2><p>आज आप क्या करना चाहते हैं?</p><input id="search" placeholder="टूल या जानकारी खोजें…"></section>
+<nav class="tabs">
+<button class="tab active" data-page="home">होम</button><button class="tab" data-page="notes">नोट्स</button><button class="tab" data-page="tasks">काम</button><button class="tab" data-page="money">हिसाब</button><button class="tab" data-page="tools">टूल्स</button>
+</nav>
+<section id="home" class="page active">
+<div class="grid">
+<button class="tile" data-open="notes"><span>📝</span><b>मेरे नोट्स</b><small>लिखें और सेव करें</small></button>
+<button class="tile" data-open="tasks"><span>✅</span><b>मेरे काम</b><small>आज की To-do सूची</small></button>
+<button class="tile" data-open="money"><span>💰</span><b>खर्च हिसाब</b><small>आय और खर्च दर्ज करें</small></button>
+<button class="tile" data-open="tools"><span>🧮</span><b>कैलकुलेटर</b><small>त्वरित गणना</small></button>
+<button class="tile" data-open="tools"><span>📅</span><b>उम्र / तारीख</b><small>जल्द उपलब्ध</small></button>
+<button class="tile" data-open="tools"><span>📄</span><b>PDF टूल्स</b><small>आगे जोड़े जाएंगे</small></button>
+</div>
+<div class="card"><h3>आज का सार</h3><div class="summary"><div><small>बाकी काम</small><strong id="taskCount">0</strong></div><div><small>आज के खर्च</small><strong id="expenseToday">₹0</strong></div><div><small>नोट्स</small><strong id="noteCount">0</strong></div></div></div>
+<div class="adslot"><small>विज्ञापन स्थान — भविष्य में AdMob/अन्य विज्ञापन SDK के साथ Android संस्करण में जोड़ा जाएगा</small></div>
+</section>
+<section id="notes" class="page"><div class="card"><h2>📝 नोट्स</h2><input id="noteTitle" placeholder="नोट का शीर्षक"><textarea id="noteText" placeholder="यहां अपना नोट लिखें…"></textarea><button class="primary" id="saveNote">नोट सेव करें</button></div><div id="notesList"></div></section>
+<section id="tasks" class="page"><div class="card"><h2>✅ काम की सूची</h2><div class="inline"><input id="taskInput" placeholder="नया काम लिखें"><button class="primary" id="addTask">जोड़ें</button></div><div id="tasksList"></div></div></section>
+<section id="money" class="page"><div class="card"><h2>💰 खर्च / आय</h2><div class="inline"><input id="amount" type="number" min="0" placeholder="राशि ₹"><select id="kind"><option value="expense">खर्च</option><option value="income">आय</option></select></div><input id="moneyNote" placeholder="विवरण (जैसे किराना)"><button class="primary" id="addMoney">रिकॉर्ड जोड़ें</button><div class="summary"><div><small>कुल आय</small><strong id="incomeTotal">₹0</strong></div><div><small>कुल खर्च</small><strong id="expenseTotal">₹0</strong></div></div><div id="moneyList"></div></div></section>
+<section id="tools" class="page"><div class="card"><h2>🧮 कैलकुलेटर</h2><input id="calcDisplay" readonly placeholder="0" class="calc-display"><div class="calc-grid" id="calcButtons"></div></div><div class="card"><h3>जल्द आने वाले टूल</h3><p>PDF टूल्स · QR स्कैनर · उम्र कैलकुलेटर · GST · EMI · AI सहायक · डॉक्यूमेंट वॉल्ट</p></div></section>
+</main>
+<footer>DAINIK • आपका डेटा इसी डिवाइस पर सेव होता है</footer>
+<script src="app.js"></script>
+</body></html>
